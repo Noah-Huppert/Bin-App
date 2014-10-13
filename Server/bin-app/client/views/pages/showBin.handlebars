@@ -1,0 +1,37 @@
+<div id="getBinPass">
+  <h1>Enter the password for Bin {{page.binCode}}</h1>
+
+  <div id="error"></div>
+  <input id="binSecret" type="text" placeholder="Bin Password" />
+  <input id="getBin" type="submit" value="Go" />
+</div>
+
+<div id="showBin">
+  <h1>Bin {{page.binCode}}: </h1>
+
+  <input id="binContent" type="text"/>
+</div>
+
+<script>
+  $("#getBin").click(function(){
+    $.ajax({
+      url: "{{site.siteUrl}}getBin",
+      data: { "binCode": "{{page.binCode}}", "binSecret": $("#binSecret").val() },
+      success: function(data){
+        if(data.error !== undefined){
+          $("#error").text(data.error);
+        } else{
+          $("#error").text("");
+          $("#getBinPass").hide();
+
+          $("#showBin #binContent").val(data.binContent);
+          $("#showBin").show();
+          $("#showBin #binContent").select();
+        }
+      },
+      error: function(){
+        $("#error").text("An error has occured");
+      }
+    });
+  });
+</script>

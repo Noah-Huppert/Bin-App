@@ -1,0 +1,29 @@
+{
+  "name": "bin",
+  "version": "0.0.1",
+  "description": "A app that allows you to share pieces of text between your Android phone and computer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@heroku.com:bin-app.git"
+  },
+  "keywords": [
+    "android",
+    "bin",
+    "bin-app",
+    "heroku",
+    "share",
+    "android-sync"
+  ],
+  "author": "Noah Huppert",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.8.8",
+    "express-handlebars": "^1.0.3",
+    "mongodb": "^1.4.10",
+    "rekuire": "^0.1.5"
+  }
+}

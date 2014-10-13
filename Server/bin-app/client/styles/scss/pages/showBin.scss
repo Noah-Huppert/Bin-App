@@ -1,0 +1,41 @@
+@import "../include";
+
+.page-showBin h1{
+  width: 100%;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.page-showBin #error{
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+input[type="text"] {
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  margin-left: calc(50% - 127px);
+}
+
+input[type="submit"] {
+  margin-top: -1px;
+  background: $color-secondary;
+  color: $color-primary;
+}
+
+
+#showBin{
+  display: none;
+
+  input[type="text"]{
+    margin-left: calc(50% - 100px);
+    margin-top: 50px;
+  }
+}
